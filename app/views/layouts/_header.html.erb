@@ -1,0 +1,11 @@
+<header class="navbar p-0 navbar-fixed-top navbar-inverse">
+      <ul class="nav mr-auto">
+        <li class="nav-link logo">
+          <a>メールボム</a>
+        </li>
+      </ul>
+      <ul class="nav">
+        <li class="nav-link"><%= link_to "アカウント設定", edit_user_registration_path %></li>
+        <li class="nav-link"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+      </ul>
+</header>

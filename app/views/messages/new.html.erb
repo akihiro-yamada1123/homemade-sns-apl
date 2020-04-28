@@ -1,0 +1,35 @@
+<h4>メッセージ送信フォーム</h4>
+<div class="field form-group mt-3">
+<%= form_with(url: import_messages_path, local: true) do |f| %>
+  <%= f.file_field :file %>
+  <%= f.submit "インポート" %>
+<% end %>
+</div>
+
+<%= form_with(model: @message, local: true) do |f| %>
+
+   <div class="field form-group">
+     <%= f.label :post_at, "送信日時" %>
+     <%= f.datetime_field :post_at %>
+   </div>
+
+   <div class="field form-group">
+     <%= f.label :body, "メッセージ" %>
+     <%= f.text_field :body, autofocus: true %>
+   </div>
+
+   <div class="field form-group">
+      <%= f.fields_for :slack_set do |i| %>
+         <%= i.label :username, "ユーザー名" %>
+         <%= i.text_field :username %>
+         <a>／</a>
+         <%= i.label :channel, "チャンネル" %>
+         <%= i.text_field :channel %>
+      <% end %>
+   </div>
+
+   <%= f.button type: "submit",class: 'btn btn-primary mb-3', style: 'border-style: none;' do %>
+     送信 <i class='fas fa-sign-in-alt'></i>
+   <% end %>
+
+<% end %>

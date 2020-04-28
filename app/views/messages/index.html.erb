@@ -1,0 +1,30 @@
+<%= javascript_pack_tag 'application' %>
+<h4>送信済みメッセージ一覧</h4>
+<div class="card mt-3" style="width: 50rem;">
+
+<table class="table table-hover">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">宛先</th>
+      <th scope="col">内容</th>
+      <th scope="col">送信日時</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @message.each do |m|%>
+      <tr>
+        <td><%= m.id %></td>
+        <td><%= m.slack_set.id %></td>
+        <td><%= m.body %></td>
+        <td><%= m.post_at.try(:strftime, "%Y-%m-%d %H:%M:%S") %></td>
+        <td><%= link_to '削除', m, class: "btn btn-raised btn-danger", method: :delete %></td>
+      </tr>
+    <% end %>
+    
+  </tbody>
+</table>
+</div>
+<%= paginate @message %>

@@ -1,0 +1,79 @@
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/brands';
+@import "font-awesome";
+@import "tempusdominus-bootstrap-4.css";
+@import '~bootstrap/scss/bootstrap';
+@import 'bootstrap-datetimepicker';
+
+header {
+  background-color:#C00;
+}
+
+.alert {
+  color: white;
+  text-align: center;
+  margin-bottom: 0em;
+  padding: 3px;
+}
+
+.alert-notice {
+  background-color: lightBlue;
+}
+
+.alert-alert {
+  background-color: yellow;
+}
+
+.logo {
+  float: left;
+  margin-right: 5px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+a {
+  color:white;
+  // font-weight: bold;
+  }
+
+body {
+    font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+  }
+
+  .listings {
+    min-height: 100vh;
+    height: 100%;
+    width: 180px;
+    float: left;
+    color: #ab9ba9;
+    background-color: teal;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 10;
+    @media screen and (max-width: 600px) {
+      display: none;
+      position: absolute;
+      &.show {
+        display: block;
+      }
+    }
+  }
+  
+  .listings_channels {
+    margin: 1rem 0 2rem;
+  }
+  
+  .channel_list {
+    padding: 0;
+    list-style-type: none;
+  }

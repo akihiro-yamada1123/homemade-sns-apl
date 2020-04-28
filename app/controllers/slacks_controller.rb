@@ -1,0 +1,2 @@
+class SlacksController < ApplicationController
+end

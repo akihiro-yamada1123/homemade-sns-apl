@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title><%= page_title %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <% unless page_title.include?("ログイン") %>
+      <%= render 'layouts/header' %>
+    <% end %>
+
+    <% flash.each do |key, value| %>
+      <p class="alert alert-<%= key %>">
+        <%= value %>
+      </p>
+    <% end %>
+  </head>
+
+  <body>
+    <div class="row">
+      <% unless page_title.include?("ログイン") %>
+        <div class="col-md-2">
+          <%= render'layouts/sidebar' %>
+        </div>
+      <% end %>
+      <div class="col-md-10 mx-auto mt-3">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
