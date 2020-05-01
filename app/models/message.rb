@@ -11,7 +11,7 @@ class Message < ApplicationRecord
   def send_slack
     Slack.configure do |config|
     # APIトークンを設定
-      config.token = 'xoxp-526861193363-666656233970-1050010206870-64871a4295edf5e8db1b4548036bc552'
+      config.token = ''
     end
 
     # APIクライアントを生成
