@@ -14,7 +14,7 @@ require("bootstrap");
 require("@fortawesome/fontawesome-free");
 require("moment")
 require("moment/ja")
-require("tempusdominus-bootstrap-4")
+// require("tempusdominus-bootstrap-4")
 
 // import 'bootstrap-material-design'
 import '../stylesheets/application';
