@@ -1,10 +1,10 @@
 class FormMessageNew 
   include ActiveModel::Model
 
-  attribute :body, :string, default: nil
-  attribute :sns, :integer, default: nil
-  attribute :token, :string, default: nil
-  attribute :channel, :string, default: nil
+  # attribute :body, :string, default: nil
+  # attribute :sns, :integer, default: nil
+  # attribute :token, :string, default: nil
+  # attribute :channel, :string, default: nil
 
 def save!
   ActiveRecord::Base.transaction do
