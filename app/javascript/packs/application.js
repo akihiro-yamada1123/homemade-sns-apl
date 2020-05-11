@@ -12,8 +12,8 @@ require("jquery")
 // require("admin-lte/dist/js/app")
 require("bootstrap");
 require("@fortawesome/fontawesome-free");
-require("moment")
-require("moment/ja")
+// require("moment")
+// require("moment/ja")
 // require("tempusdominus-bootstrap-4")
 
 // import 'bootstrap-material-design'
